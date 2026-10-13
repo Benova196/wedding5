@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIBECK 2026 | Chinedu Benjamin & Ifeoma Becky Luxury Wedding Invitation</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            600: '#800020',
+                            700: '#5C0015',
+                            900: '#3A000D'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C'
+                        },
+                        ivory: '#FDFBF7'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FDFBF7;
+            color: #2C221E;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="selection:bg-gold/30 antialiased relative">
+
+    <!-- AUDIO PLAYER -->
+    <audio id="bg-audio" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=romantic-wedding-piano-112190.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Audio Toggle -->
+    <button id="music-toggle" onclick="toggleAudio()" class="fixed bottom-6 right-6 z-50 bg-burgundy-600 text-gold p-3.5 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2 border border-gold/40 hidden">
+        <svg id="audio-icon" class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+        <span id="music-text" class="text-xs font-semibold tracking-wider pr-1">Music OFF</span>
+    </button>
+
+    <!-- 2. IMMERSIVE OPENING SCREEN & ENVELOPE REVEAL -->
+    <div id="envelope-screen" class="fixed inset-0 z-50 bg-[#1A120B] flex items-center justify-center p-4 overflow-hidden transition-all duration-700">
+        <div class="absolute w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+
+        <div class="relative max-w-md w-full bg-ivory rounded-2xl shadow-2xl p-8 text-center border-4 border-gold/60 transform transition-all duration-700" id="envelope-card">
+            
+            <!-- Monogram Wax Seal -->
+            <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-burgundy-600 rounded-full border-4 border-gold flex items-center justify-center shadow-xl">
+                <span class="text-gold font-serif text-3xl font-bold tracking-tighter">C&B</span>
+            </div>
+
+            <div class="mt-8 space-y-4">
+                <span class="text-xs uppercase tracking-[0.3em] text-burgundy-600 font-bold block">
+                    CHIBECK 2026
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">
+                    Two Hearts. <br>One Beautiful Story.
+                </h1>
+                <p class="text-sm text-gray-600 font-serif italic">
+                    CHINEDU BENJAMIN & IFEOMA BECKY
+                </p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest">
+                    Asaba, Delta State, Nigeria
+                </p>
+
+                <div class="my-6 py-4 border-y border-gold/30">
+                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                        "Before you meet the couple, a legendary celebration awaits you. Step inside our world of love, laughter, and timeless elegance."
+                    </p>
+                </div>
+
+                <button
+                    onclick="openInvitation()"
+                    class="w-full bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-gold border border-gold/50 py-4 px-6 rounded-xl font-bold text-sm tracking-widest shadow-xl hover:shadow-gold/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 group"
+                >
+                    <span>OPEN YOUR INVITATION</span>
+                    <span class="text-lg group-hover:translate-x-1 transition-transform">💌</span>
+                </button>
+                
+                <p class="text-[11px] text-gray-400">
+                    Tap to open audio experience & explore wedding details
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 13. NAVIGATION BAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-transparent py-5 hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                <div class="w-10 h-10 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-serif font-bold border border-gold/50 shadow">
+                    CB
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-burgundy-600 font-bold block">CHIBECK 2026</span>
+                    <span class="text-sm font-serif font-bold text-[#2C221E]">Chinedu & Ifeoma</span>
+                </div>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-[#2C221E] bg-ivory/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-gold/30 shadow-sm">
+                <a href="#story" class="hover:text-burgundy-600 transition-colors">Our Story</a>
+                <button onclick="openGameCenter()" class="text-burgundy-600 font-bold flex items-center gap-1 hover:opacity-80 transition-opacity">
+                    <span>🎮 Game Center</span>
+                </button>
+                <a href="#details" class="hover:text-burgundy-600 transition-colors">Details</a>
+                <a href="#gallery" class="hover:text-burgundy-600 transition-colors">Gallery</a>
+                <a href="#program" class="hover:text-burgundy-600 transition-colors">Program</a>
+                <a href="#rsvp" class="bg-burgundy-600 text-gold px-5 py-2 rounded-full font-bold shadow hover:scale-105 transition-all">
+                    RSVP
+                </a>
+            </div>
+
+            <!-- Mobile Buttons -->
+            <div class="md:hidden flex items-center gap-2">
+                <button onclick="openGameCenter()" class="bg-burgundy-600 text-gold px-3 py-2 rounded-full text-xs font-bold shadow">
+                    🎮 Games
+                </button>
+                <button onclick="toggleMobileMenu()" class="text-[#2C221E] p-2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-ivory border-b border-gold/30 shadow-xl py-4 px-6 flex flex-col gap-4 text-center">
+            <a href="#story" onclick="toggleMobileMenu()" class="py-2 text-base font-medium">Our Story</a>
+            <a href="#details" onclick="toggleMobileMenu()" class="py-2 text-base font-medium">Wedding Details</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="py-2 text-base font-medium">Photo Gallery</a>
+            <a href="#program" onclick="toggleMobileMenu()" class="py-2 text-base font-medium">Wedding Program</a>
+            <a href="#rsvp" onclick="toggleMobileMenu()" class="w-full bg-burgundy-600 text-gold py-3 rounded-xl font-bold shadow">
+                RSVP NOW
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <div id="main-content" class="opacity-0 transition-opacity duration-1000">
+        
+        <!-- 4. MAIN WEDDING HERO SECTION -->
+        <section class="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 overflow-hidden bg-[#1A120B]">
+            <div class="absolute inset-0 z-0">
+                <img 
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85" 
+                    alt="Chinedu & Ifeoma Engagement" 
+                    class="w-full h-full object-cover opacity-40 scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1A120B] via-[#1A120B]/60 to-black/40"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+                <div class="inline-flex items-center gap-2 bg-gold/20 border border-gold/50 px-4 py-1.5 rounded-full text-gold text-xs font-semibold tracking-[0.2em]">
+                    <span>✨ CHIBECK 2026 OFFICIAL INVITATION</span>
+                </div>
+
+                <h2 class="text-xs uppercase tracking-[0.4em] text-gray-300 font-medium">
+                    THE BEGINNING OF FOREVER
+                </h2>
+
+                <div class="space-y-2">
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight text-ivory">
+                        Chinedu Benjamin
+                    </h1>
+                    <span class="text-2xl sm:text-3xl font-serif italic text-gold block">&amp;</span>
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight text-ivory">
+                        Ifeoma Becky
+                    </h1>
+                </div>
+
+                <p class="text-sm sm:text-base text-gray-300 max-w-xl mx-auto font-serif italic">
+                    "Two families. One love story. A lifetime of beautiful memories in Asaba, Delta State, Nigeria."
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a 
+                        href="#story" 
+                        class="w-full sm:w-auto bg-gold text-[#1A120B] px-8 py-4 rounded-full font-bold text-sm tracking-wider hover:bg-white transition-all shadow-xl hover:scale-105"
+                    >
+                        EXPLORE OUR STORY
+                    </a>
+                    <button 
+                        onclick="openGameCenter()"
+                        class="w-full sm:w-auto bg-burgundy-600/90 text-gold border border-gold/50 px-8 py-4 rounded-full font-bold text-sm tracking-wider hover:bg-burgundy-600 transition-all shadow-xl hover:scale-105 flex items-center justify-center gap-2"
+                    >
+                        <span>PLAY WEDDING GAMES</span>
+                        <span>🎮</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Game Banner -->
+        <section class="bg-gradient-to-r from-burgundy-600 to-[#2C221E] text-white py-6 px-4 text-center shadow-xl">
+            <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-left">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest">Interactive Experience</span>
+                    <h3 class="text-xl font-serif font-bold">The CHIBECK Wedding Challenge 🎮</h3>
+                    <p class="text-sm text-gray-300">Think you know Chinedu & Ifeoma? Test your detective skills & catch rings!</p>
+                </div>
+                <button 
+                    onclick="openGameCenter()"
+                    class="bg-gold text-[#2C221E] px-6 py-3 rounded-full font-bold text-sm tracking-wider hover:bg-white transition-all shadow-lg hover:scale-105 shrink-0"
+                >
+                    PLAY GAMES NOW ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- 5. OUR LOVE STORY TIMELINE -->
+        <section id="story" class="py-24 px-4 bg-ivory">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center space-y-3 mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-burgundy-600">Our Journey</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">How We Got Here</h2>
+                    <div class="w-16 h-1 bg-gold mx-auto"></div>
+                </div>
+
+                <div class="relative border-l-2 border-gold/40 ml-4 sm:ml-32 space-y-12">
+                    
+                    <div class="relative pl-8 sm:pl-12">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-burgundy-600 border-2 border-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-burgundy-600">The Spark</span>
+                        <h3 class="text-xl font-serif font-bold text-[#2C221E] mt-1">How It All Began</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">Our paths crossed during a bustling afternoon in the heart of the city. A brief conversation over spilled coffee turned into hours of laughter and an undeniable connection that neither of us saw coming.</p>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-12">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-burgundy-600 border-2 border-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-burgundy-600">Growing Closer</span>
+                        <h3 class="text-xl font-serif font-bold text-[#2C221E] mt-1">The First Spark</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">From shared playlists and debates on Nigerian cuisine to deep dreams about the future, every moment together felt like coming home. We knew we were onto something truly rare.</p>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-12">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-burgundy-600 border-2 border-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-burgundy-600">Adventures & Memories</span>
+                        <h3 class="text-xl font-serif font-bold text-[#2C221E] mt-1">The Journey Together</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">We celebrated triumphs, navigated challenges hand in hand, and built a foundation of trust, patience, and profound joy. Our love grew deeper with every sunrise.</p>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-12">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-burgundy-600 border-2 border-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-burgundy-600">A Magical Evening</span>
+                        <h3 class="text-xl font-serif font-bold text-[#2C221E] mt-1">The Proposal</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">Under a canopy of fairy lights and surrounded by our closest loved ones, Chinedu got down on one knee in Asaba. With tears of joy and overflowing love, Ifeoma said yes to forever.</p>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-12">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-burgundy-600 border-2 border-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-burgundy-600">CHIBECK 2026</span>
+                        <h3 class="text-xl font-serif font-bold text-[#2C221E] mt-1">Forever Starts Here</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">Now, we invite our dearest family and friends to witness our joy as we step into this sacred covenant and celebrate our traditional and white wedding in beautiful Asaba.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. LIVE COUNTDOWN TIMER -->
+        <section class="py-20 px-4 bg-[#1A120B] text-white text-center">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Counting Down to Forever</span>
+                <h2 class="text-3xl font-serif font-bold">The Anticipation is Building</h2>
+                <div class="p-6 bg-[#2C221E]/60 rounded-2xl border border-gold/30 max-w-md mx-auto shadow-xl">
+                    <p class="text-lg font-serif italic text-gold">"Counting Down to a Legendary Celebration in Asaba"</p>
+                    <p class="text-xs text-gray-400 mt-2">Exact date countdown will activate once officially announced.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. WEDDING DETAILS REVEAL SECTION -->
+        <section id="details" class="py-24 px-4 bg-white border-y border-gold/20">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center space-y-3 mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-burgundy-600">Event Information</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">The Wedding Details</h2>
+                    <div class="w-16 h-1 bg-gold mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Date -->
+                    <div class="bg-ivory p-8 rounded-3xl border-2 border-gold/30 shadow-lg text-center space-y-4">
+                        <div class="w-14 h-14 mx-auto bg-burgundy-600/10 rounded-full flex items-center justify-center text-burgundy-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold">THE BIG DATE</h3>
+                        <div class="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                            <p class="text-sm font-serif italic text-amber-900">Wedding Date Coming Soon</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Official date announcement coming soon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Colors -->
+                    <div class="bg-ivory p-8 rounded-3xl border-2 border-gold/30 shadow-lg text-center space-y-4">
+                        <div class="w-14 h-14 mx-auto bg-burgundy-600/10 rounded-full flex items-center justify-center text-burgundy-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 73l.01-.01"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold">COLOR OF THE DAY</h3>
+                        <div class="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                            <p class="text-sm font-serif italic text-amber-900">THE COLORS ARE STILL A SECRET 🤫</p>
+                            <p class="text-[11px] text-gray-500 mt-1">The Color of the Day Will Be Revealed Soon</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Venue -->
+                    <div class="bg-ivory p-8 rounded-3xl border-2 border-gold/30 shadow-lg text-center space-y-4">
+                        <div class="w-14 h-14 mx-auto bg-burgundy-600/10 rounded-full flex items-center justify-center text-burgundy-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold">THE VENUE</h3>
+                        <div class="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                            <p class="text-sm font-serif italic text-amber-900">Venue Details Coming Soon</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Asaba, Delta State, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PRE-WEDDING PHOTO GALLERY -->
+        <section id="gallery" class="py-24 px-4 bg-ivory">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center space-y-3 mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-burgundy-600">Our Memories</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">Pre-Wedding Gallery</h2>
+                    <p class="text-sm text-gray-600 font-serif italic">"Every love story is beautiful, but ours is our favorite."</p>
+                    <div class="w-16 h-1 bg-gold mx-auto"></div>
+                </div>
+
+                <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+                <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <div class="max-w-3xl w-full text-center space-y-4">
+                    <img id="lightbox-img" src="" alt="Gallery Lightbox" class="max-h-[75vh] mx-auto rounded-2xl shadow-2xl" />
+                    <p id="lightbox-caption" class="text-gold font-serif italic text-lg"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. WEDDING PROGRAM -->
+        <section id="program" class="py-24 px-4 bg-white border-y border-gold/20">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center space-y-3 mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-burgundy-600">Order of Events</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">Wedding Program</h2>
+                    <p class="text-xs text-amber-800 font-semibold">(Provisional schedule subject to final couple confirmation)</p>
+                    <div class="w-16 h-1 bg-gold mx-auto"></div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-ivory p-6 rounded-2xl border border-gold/30 shadow-sm gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-bold text-sm shrink-0">10:00</div>
+                            <div>
+                                <span class="text-xs font-bold text-burgundy-600">10:00 AM</span>
+                                <h3 class="text-lg font-serif font-bold text-[#2C221E]">Guest Arrival & Seating</h3>
+                                <p class="text-sm text-gray-600">Guests are seated to soft classical and Afrobeats melodies.</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold">Provisional</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-ivory p-6 rounded-2xl border border-gold/30 shadow-sm gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-bold text-sm shrink-0">11:00</div>
+                            <div>
+                                <span class="text-xs font-bold text-burgundy-600">11:00 AM</span>
+                                <h3 class="text-lg font-serif font-bold text-[#2C221E]">Opening Prayers & Introduction</h3>
+                                <p class="text-sm text-gray-600">Traditional rites and opening blessings by family elders.</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold">Provisional</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-ivory p-6 rounded-2xl border border-gold/30 shadow-sm gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-bold text-sm shrink-0">12:00</div>
+                            <div>
+                                <span class="text-xs font-bold text-burgundy-600">12:00 PM</span>
+                                <h3 class="text-lg font-serif font-bold text-[#2C221E]">Couple's Grand Entrance</h3>
+                                <p class="text-sm text-gray-600">Chinedu & Ifeoma make their breathtaking entrance in royal attire.</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold">Provisional</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-ivory p-6 rounded-2xl border border-gold/30 shadow-sm gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-bold text-sm shrink-0">02:30</div>
+                            <div>
+                                <span class="text-xs font-bold text-burgundy-600">02:30 PM</span>
+                                <h3 class="text-lg font-serif font-bold text-[#2C221E]">Reception & Feast</h3>
+                                <p class="text-sm text-gray-600">Exquisite Nigerian cuisine, palm wine, champagne, and laughter.</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold">Provisional</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-ivory p-6 rounded-2xl border border-gold/30 shadow-sm gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-bold text-sm shrink-0">05:00</div>
+                            <div>
+                                <span class="text-xs font-bold text-burgundy-600">05:00 PM</span>
+                                <h3 class="text-lg font-serif font-bold text-[#2C221E]">First Dance & Celebration</h3>
+                                <p class="text-sm text-gray-600">Dancing the night away to live band and DJ sets!</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold">Provisional</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. POLISHED RSVP FORM -->
+        <section id="rsvp" class="py-24 px-4 bg-ivory">
+            <div class="max-w-2xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border-2 border-gold/50 shadow-2xl">
+                <div class="text-center space-y-3 mb-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-burgundy-600">Be Our Guest</span>
+                    <h2 class="text-3xl font-serif font-bold text-[#2C221E]">RSVP for CHIBECK 2026</h2>
+                    <p class="text-sm text-gray-600">Please respond by November 15, 2026 to help us prepare an unforgettable experience.</p>
+                </div>
+
+                <form id="rsvp-form" onsubmit="handleRSVP(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="rsvp-name"
+                            required
+                            placeholder="Dr. / Chief / Mr. & Mrs. ..."
+                            class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                        />
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="rsvp-email"
+                                placeholder="name@example.com"
+                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="rsvp-phone"
+                                placeholder="+234 800 000 0000"
+                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Will You Attend? *</label>
+                            <select 
+                                id="rsvp-attendance"
+                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                            >
+                                <option value="accept">Joyfully Accepts 🎉</option>
+                                <option value="decline">Regretfully Declines 💔</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Number of Attendees</label>
+                            <select 
+                                id="rsvp-guests"
+                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                            >
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests (Couple/Plus One)</option>
+                                <option value="3">3 Guests Family</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Dietary Requirements (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="rsvp-dietary"
+                            placeholder="Vegetarian, allergies, etc."
+                            class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Personal Message to Chinedu & Ifeoma</label>
+                        <textarea 
+                            id="rsvp-message"
+                            rows="3"
+                            placeholder="Leave your warm wishes for the couple..."
+                            class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-burgundy-600"
+                        ></textarea>
+                    </div>
+
+                    <button 
+                        type="submit"
+                        class="w-full bg-burgundy-600 text-gold py-4 rounded-xl font-bold text-sm tracking-wider shadow-xl hover:bg-burgundy-700 transition-all flex items-center justify-center gap-2"
+                    >
+                        <span>CONFIRM & SUBMIT RSVP</span>
+                    </button>
+                    <p class="text-[11px] text-gray-400 text-center">Demo mode active. Backend integration ready for Supabase or Firebase.</p>
+                </form>
+
+                <!-- Success Box -->
+                <div id="rsvp-success" class="hidden text-center py-12 space-y-4">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
+                        ✓
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-[#2C221E]">RSVP Received Successfully!</h3>
+                    <p id="rsvp-success-text" class="text-sm text-gray-600">Your response has been recorded for CHIBECK 2026. We look forward to celebrating with you in Asaba!</p>
+                    <button onclick="resetRSVP()" class="mt-4 text-xs font-bold text-burgundy-600 underline">
+                        Submit another response
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. SHARE YOUR INVITATION -->
+        <section class="py-20 px-4 bg-[#1A120B] text-white text-center">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Spread the Joy</span>
+                <h2 class="text-3xl font-serif font-bold">Share the Invitation</h2>
+                <p class="text-sm text-gray-300">Know someone who should be part of this legendary celebration? Share the link with friends and family.</p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <button 
+                        onclick="shareWhatsApp()"
+                        class="w-full sm:w-auto bg-[#25D366] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2"
+                    >
+                        <span>Share via WhatsApp 💬</span>
+                    </button>
+                    <button 
+                        onclick="copyLink()"
+                        id="copy-btn"
+                        class="w-full sm:w-auto bg-gold text-[#1A120B] px-8 py-3.5 rounded-full font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-2"
+                    >
+                        <span>Copy Invitation Link</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. FOOTER -->
+        <footer class="bg-[#120C08] text-white py-16 px-4 text-center border-t border-gold/30">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="w-12 h-12 rounded-full bg-burgundy-600 text-gold flex items-center justify-center font-serif font-bold mx-auto border border-gold/50 text-lg shadow">
+                    CB
+                </div>
+                <p class="text-sm font-serif italic text-gold">"And they lived, loved, and laughed..."</p>
+                <h3 class="text-2xl font-serif font-bold">Chinedu Benjamin &amp; Ifeoma Becky</h3>
+                <span class="text-xs uppercase tracking-[0.3em] text-gray-400 block">CHIBECK 2026</span>
+                
+                <div class="w-16 h-0.5 bg-gold/50 mx-auto"></div>
+
+                <p class="text-xs text-gray-500">
+                    Made with love, for a love that lasts forever. ❤️ Asaba, Delta State, Nigeria.
+                </p>
+
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="text-xs text-gold underline hover:text-white pt-4 block mx-auto">
+                    Back to Top ↑
+                </button>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- 3. WEDDING GUEST GAME CENTER MODAL -->
+    <div id="game-modal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-ivory max-w-2xl w-full rounded-3xl border-2 border-gold/60 p-6 sm:p-8 shadow-2xl relative my-8 max-h-[90vh] overflow-y-auto">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-gold/30 mb-6">
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-burgundy-600 font-bold">CHIBECK 2026 Interactive Zone</span>
+                    <h2 class="text-2xl font-serif font-bold text-[#2C221E]">THE CHIBECK CHALLENGE 🎮</h2>
+                </div>
+                <button onclick="closeGameCenter()" class="bg-[#2C221E] text-ivory p-2 rounded-full hover:bg-burgundy-600 transition-all">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Badges Bar -->
+            <div id="badge-bar" class="mb-6 bg-gold/15 border border-gold/50 p-3 rounded-2xl flex items-center gap-2 overflow-x-auto text-xs font-bold text-burgundy-600 hidden">
+                <span>🏆 Badges Earned:</span>
+                <span id="badge-list" class="flex gap-2"></span>
+            </div>
+
+            <!-- Game Menu View -->
+            <div id="game-menu-view" class="space-y-4">
+                <p class="text-center text-xs sm:text-sm text-gray-600 font-serif italic mb-4">
+                    "You can't just enter a wedding this legendary without passing a small test! Choose your challenge below."
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div onclick="startQuiz()" class="bg-white p-5 rounded-2xl border-2 border-gold/40 shadow hover:border-burgundy-600 cursor-pointer transition-all hover:scale-[1.02]">
+                        <div class="text-2xl mb-2">💖</div>
+                        <h4 class="font-serif font-bold text-lg">1. Who Knows the Couple?</h4>
+                        <p class="text-xs text-gray-600 mt-1">Test your intuition with a hilarious couple quiz.</p>
+                        <span class="text-[11px] font-bold text-burgundy-600 mt-3 inline-block">PLAY QUIZ →</span>
+                    </div>
+
+                    <div onclick="startRingGame()" class="bg-white p-5 rounded-2xl border-2 border-gold/40 shadow hover:border-burgundy-600 cursor-pointer transition-all hover:scale-[1.02]">
+                        <div class="text-2xl mb-2">💍</div>
+                        <h4 class="font-serif font-bold text-lg">2. Catch the Wedding Rings</h4>
+                        <p class="text-xs text-gray-600 mt-1">Tap fast to catch falling rings & hearts in 20 seconds!</p>
+                        <span class="text-[11px] font-bold text-burgundy-600 mt-3 inline-block">PLAY MINI-GAME →</span>
+                    </div>
+
+                    <div onclick="startMysteryGame()" class="bg-white p-5 rounded-2xl border-2 border-gold/40 shadow hover:border-burgundy-600 cursor-pointer transition-all hover:scale-[1.02]">
+                        <div class="text-2xl mb-2">🕵️‍♂️</div>
+                        <h4 class="font-serif font-bold text-lg">3. Guess Wedding Details</h4>
+                        <p class="text-xs text-gray-600 mt-1">Inspect mystery cards for date, colors, and venue.</p>
+                        <span class="text-[11px] font-bold text-burgundy-600 mt-3 inline-block">EXPLORE MYSTERIES →</span>
+                    </div>
+
+                    <div onclick="startDanceGame()" class="bg-white p-5 rounded-2xl border-2 border-gold/40 shadow hover:border-burgundy-600 cursor-pointer transition-all hover:scale-[1.02]">
+                        <div class="text-2xl mb-2">💃</div>
+                        <h4 class="font-serif font-bold text-lg">4. Wedding Dance Challenge</h4>
+                        <p class="text-xs text-gray-600 mt-1">Choose your dance style for the reception.</p>
+                        <span class="text-[11px] font-bold text-burgundy-600 mt-3 inline-block">CHOOSE DANCE →</span>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button onclick="closeGameCenter()" class="text-xs text-gray-500 underline font-semibold">
+                        Skip games & return to invitation
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Game View -->
+            <div id="game-quiz-view" class="hidden space-y-6">
+                <div class="flex justify-between items-center text-xs font-bold text-burgundy-600">
+                    <button onclick="backToGameMenu()" class="underline">← Back to Games</button>
+                    <span id="quiz-progress">Question 1 of 5</span>
+                </div>
+                <h3 id="quiz-question" class="text-xl font-serif font-bold text-[#2C221E]"></h3>
+                <div id="quiz-options" class="space-y-3"></div>
+                <div id="quiz-feedback" class="p-4 bg-gold/10 rounded-xl text-sm font-serif italic text-burgundy-600 hidden"></div>
+            </div>
+
+            <!-- Ring Catch Game View -->
+            <div id="game-rings-view" class="hidden space-y-4 text-center">
+                <div class="flex justify-between items-center text-xs font-bold text-burgundy-600">
+                    <button onclick="backToGameMenu()" class="underline">← Back to Games</button>
+                    <span id="ring-stats">Time: 20s | Score: 0</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold">Catch the Wedding Rings! 💍</h3>
+                <p class="text-xs text-gray-600">Tap falling rings & hearts before time runs out!</p>
+                <div id="ring-board" class="relative h-64 bg-[#1A120B] rounded-2xl overflow-hidden border-2 border-gold/40 cursor-pointer">
+                    <div id="ring-start-prompt" class="absolute inset-0 flex items-center justify-center">
+                        <button onclick="initRingGameLoop()" class="bg-burgundy-600 text-gold px-6 py-3 rounded-full font-bold text-sm shadow">
+                            START GAME 🚀
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mystery Cards Game View -->
+            <div id="game-mystery-view" class="hidden space-y-4">
+                <div class="flex justify-between items-center text-xs font-bold text-burgundy-600">
+                    <button onclick="backToGameMenu()" class="underline">← Back to Games</button>
+                    <span>Mystery Box</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-center">Guess the Wedding Details 🕵️‍♂️</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div class="bg-white p-4 rounded-xl border border-gold/40 text-center space-y-2">
+                        <div class="text-2xl">📅</div>
+                        <h4 class="font-serif font-bold text-sm">The Big Date</h4>
+                        <div id="mystery-date-box">
+                            <button onclick="revealMystery('date')" class="w-full bg-burgundy-600 text-gold text-xs py-2 rounded font-bold">Reveal Status</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gold/40 text-center space-y-2">
+                        <div class="text-2xl">🎨</div>
+                        <h4 class="font-serif font-bold text-sm">Color of Day</h4>
+                        <div id="mystery-color-box">
+                            <button onclick="revealMystery('color')" class="w-full bg-burgundy-600 text-gold text-xs py-2 rounded font-bold">Reveal Secret</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gold/40 text-center space-y-2">
+                        <div class="text-2xl">📍</div>
+                        <h4 class="font-serif font-bold text-sm">Venue</h4>
+                        <div id="mystery-venue-box">
+                            <button onclick="revealMystery('venue')" class="w-full bg-burgundy-600 text-gold text-xs py-2 rounded font-bold">Reveal Clue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dance Challenge View -->
+            <div id="game-dance-view" class="hidden space-y-4 text-center">
+                <div class="flex justify-between items-center text-xs font-bold text-burgundy-600">
+                    <button onclick="backToGameMenu()" class="underline">← Back to Games</button>
+                    <span>Dance Meter</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold">The Wedding Dance Challenge 💃</h3>
+                <p class="text-xs text-gray-600">Choose your official reception dance style:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left" id="dance-options-box">
+                    <button onclick="selectDance('Azonto', '🕺', 'Certified Lagos & Asaba Groove Master!')" class="p-3 rounded-xl border bg-white hover:border-burgundy-600 font-bold text-sm flex items-center gap-2"><span>🕺</span> Azonto</button>
+                    <button onclick="selectDance('Amapiano', '🔥', 'Logger head of the log drum rhythm!')" class="p-3 rounded-xl border bg-white hover:border-burgundy-600 font-bold text-sm flex items-center gap-2"><span>🔥</span> Amapiano</button>
+                    <button onclick="selectDance('Afrobeat', '💃', 'Fela Kuti would be proud of your energy!')" class="p-3 rounded-xl border bg-white hover:border-burgundy-600 font-bold text-sm flex items-center gap-2"><span>💃</span> Afrobeat</button>
+                    <button onclick="selectDance('Traditional Igbo', '👑', 'Royal waist-whining and cultural majesty!')" class="p-3 rounded-xl border bg-white hover:border-burgundy-600 font-bold text-sm flex items-center gap-2"><span>👑</span> Traditional Igbo Dance</button>
+                </div>
+                <div id="dance-result-box" class="hidden space-y-3 py-4">
+                    <div id="dance-emoji" class="text-4xl animate-bounce"></div>
+                    <h4 id="dance-title" class="font-serif font-bold text-lg"></h4>
+                    <p id="dance-desc" class="text-xs text-burgundy-600 font-semibold"></p>
+                    <button onclick="resetDance()" class="bg-burgundy-600 text-gold px-4 py-2 rounded-full text-xs font-bold">Choose Another</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // Gallery Photos Data
+        const galleryPhotos = [
+            { url: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80", caption: "Romantic Sunset Portrait in Asaba" },
+            { url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80", caption: "Elegance in Traditional Attire" },
+            { url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80", caption: "Pure Joy & Laughter" },
+            { url: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80", caption: "The Engagement Ring" },
+            { url: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80", caption: "A Toast to Forever" },
+            { url: "https://images.unsplash.com/photo-1546074177-ffdda98d2161?auto=format&fit=crop&w=1200&q=80", caption: "Cinematic Moments" },
+            { url: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=80", caption: "Warmth and Sophistication" },
+            { url: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1200&q=80", caption: "Walking into Our Future" }
+        ];
+
+        // Quiz Questions Data
+        const quizQuestions = [
+            {
+                question: "Who do you think said ‘I love you’ first?",
+                options: ["Chinedu 😂", "Ifeoma 😍", "Both of them simultaneously! ❤️"],
+                feedback: "Ah, the eternal mystery of modern romance! Both claim they said it first."
+            },
+            {
+                question: "Who is more likely to take 100 pictures before choosing one?",
+                options: ["Chinedu 😂", "Ifeoma 😍", "Neither, they are both perfectionists! 📸"],
+                feedback: "Every angle must be pristine for the CHIBECK album!"
+            },
+            {
+                question: "Who will take longer to get ready for the wedding?",
+                options: ["Chinedu (Suit adjustments!) 👔", "Ifeoma (Flawless glam!) ✨", "They'll arrive fashionably late together 🚗"],
+                feedback: "Royal traditional attire requires royal patience!"
+            },
+            {
+                question: "Who is more likely to steal food from the other person's plate?",
+                options: ["Chinedu 🍗", "Ifeoma 🍲", "They share everything... except plantain! 😉"],
+                feedback: "In Nigerian households, sharing meat is the ultimate test of love."
+            },
+            {
+                question: "Who will cry first during the wedding ceremony?",
+                options: ["Chinedu (Trying to hold it together) 🥹", "Ifeoma (Happy tears!) 😭", "The groomsmen in the front row 🕶️"],
+                feedback: "Prepare your handkerchiefs; it's going to be an emotional masterpiece!"
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let earnedBadges = [];
+        let ringScore = 0;
+        let ringTimeLeft = 20;
+        let ringInterval = null;
+
+        // Initialize Page on load
+        window.onload = function() {
+            renderGallery();
+        };
+
+        // Audio Toggle
+        let isAudioPlaying = false;
+        function toggleAudio() {
+            const audio = document.getElementById('bg-audio');
+            const icon = document.getElementById('audio-icon');
+            const text = document.getElementById('music-text');
+            
+            if (isAudioPlaying) {
+                audio.pause();
+                isAudioPlaying = false;
+                text.innerText = "Music OFF";
+            } else {
+                audio.play().then(() => {
+                    isAudioPlaying = true;
+                    text.innerText = "Music ON";
+                }).catch(e => console.log("Audio play blocked:", e));
+            }
+        }
+
+        // Open Invitation
+        function openInvitation() {
+            const screen = document.getElementById('envelope-screen');
+            const card = document.getElementById('envelope-card');
+            const mainContent = document.getElementById('main-content');
+            const navbar = document.getElementById('navbar');
+            const musicBtn = document.getElementById('music-toggle');
+
+            card.classList.add('scale-110', 'opacity-0', 'rotate-3');
+            setTimeout(() => {
+                screen.style.display = 'none';
+                mainContent.classList.remove('opacity-0');
+                navbar.classList.remove('hidden');
+                musicBtn.classList.remove('hidden');
+
+                // Try starting audio
+                const audio = document.getElementById('bg-audio');
+                audio.play().then(() => {
+                    isAudioPlaying = true;
+                    document.getElementById('music-text').innerText = "Music ON";
+                }).catch(e => console.log(e));
+
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            }, 600);
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Gallery Render & Lightbox
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = galleryPhotos.map((photo, index) => `
+                <div onclick="openLightbox(${index})" class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer aspect-[3/4]">
+                    <img src="${photo.url}" alt="${photo.caption}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-white text-xs font-medium">${photo.caption}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openLightbox(index) {
+            const photo = galleryPhotos[index];
+            document.getElementById('lightbox-img').src = photo.url;
+            document.getElementById('lightbox-caption').innerText = photo.caption;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.getElementById('lightbox').classList.add('flex');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox').classList.remove('flex');
+        }
+
+        // Game Center Navigation & Logic
+        function openGameCenter() {
+            document.getElementById('game-modal').classList.remove('hidden');
+            document.getElementById('game-modal').classList.add('flex');
+            showGameView('menu');
+        }
+
+        function closeGameCenter() {
+            document.getElementById('game-modal').classList.add('hidden');
+            document.getElementById('game-modal').classList.remove('flex');
+            clearInterval(ringInterval);
+        }
+
+        function showGameView(view) {
+            document.getElementById('game-menu-view').classList.add('hidden');
+            document.getElementById('game-quiz-view').classList.add('hidden');
+            document.getElementById('game-rings-view').classList.add('hidden');
+            document.getElementById('game-mystery-view').classList.add('hidden');
+            document.getElementById('game-dance-view').classList.add('hidden');
+
+            if(view === 'menu') document.getElementById('game-menu-view').classList.remove('hidden');
+            if(view === 'quiz') document.getElementById('game-quiz-view').classList.remove('hidden');
+            if(view === 'rings') document.getElementById('game-rings-view').classList.remove('hidden');
+            if(view === 'mystery') document.getElementById('game-mystery-view').classList.remove('hidden');
+            if(view === 'dance') document.getElementById('game-dance-view').classList.remove('hidden');
+        }
+
+        function backToGameMenu() {
+            clearInterval(ringInterval);
+            showGameView('menu');
+        }
+
+        function addBadge(badgeName) {
+            if (!earnedBadges.includes(badgeName)) {
+                earnedBadges.push(badgeName);
+                const bar = document.getElementById('badge-bar');
+                const list = document.getElementById('badge-list');
+                bar.classList.remove('hidden');
+                list.innerHTML = earnedBadges.map(b => `<span class="bg-burgundy-600 text-gold px-2.5 py-1 rounded-full text-[10px] shadow">${b}</span>`).join('');
+                confetti({ particleCount: 50, spread: 60 });
+            }
+        }
+
+        // Quiz Game
+        function startQuiz() {
+            currentQuizIndex = 0;
+            showGameView('quiz');
+            renderQuizQuestion();
+        }
+
+        function renderQuizQuestion() {
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuizIndex + 1} of ${quizQuestions.length}`;
+            document.getElementById('quiz-question').innerText = q.question;
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            
+            const optionsBox = document.getElementById('quiz-options');
+            optionsBox.innerHTML = q.options.map((opt, idx) => `
+                <button onclick="answerQuiz(${idx})" class="w-full text-left p-4 rounded-xl font-medium border-2 border-gray-200 bg-ivory hover:border-burgundy-600 transition-all">
+                    ${opt}
+                </button>
+            `).join('');
+        }
+
+        function answerQuiz(idx) {
+            const q = quizQuestions[currentQuizIndex];
+            const feedbackBox = document.getElementById('quiz-feedback');
+            feedbackBox.innerText = "✨ " + q.feedback;
+            feedbackBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                currentQuizIndex++;
+                if (currentQuizIndex < quizQuestions.length) {
+                    renderQuizQuestion();
+                } else {
+                    addBadge("Love Detective 💘");
+                    document.getElementById('quiz-question').innerText = "🎉 Certified CHIBECK Love Detective!";
+                    document.getElementById('quiz-options').innerHTML = `<button onclick="backToGameMenu()" class="w-full bg-burgundy-600 text-gold py-3 rounded-xl font-bold">Back to Games</button>`;
+                    feedbackBox.classList.add('hidden');
+                }
+            }, 1500);
+        }
+
+        // Ring Catch Game
+        function startRingGame() {
+            showGameView('rings');
+            ringScore = 0;
+            ringTimeLeft = 20;
+            document.getElementById('ring-stats').innerText = `Time: 20s | Score: 0`;
+            document.getElementById('ring-start-prompt').classList.remove('hidden');
+        }
+
+        function initRingGameLoop() {
+            document.getElementById('ring-start-prompt').classList.add('hidden');
+            const board = document.getElementById('ring-board');
+            
+            ringInterval = setInterval(() => {
+                ringTimeLeft--;
+                document.getElementById('ring-stats').innerText = `Time: ${ringTimeLeft}s | Score: ${ringScore}`;
+
+                // Spawn item
+                const item = document.createElement('button');
+                item.innerText = ['💍', '❤️', '💐'][Math.floor(Math.random() * 3)];
+                item.className = 'absolute text-3xl cursor-pointer animate-bounce';
+                item.style.left = `${Math.random() * 80 + 10}%`;
+                item.style.top = `${Math.random() * 60 + 20}%`;
+                item.onclick = () => {
+                    ringScore++;
+                    document.getElementById('ring-stats').innerText = `Time: ${ringTimeLeft}s | Score: ${ringScore}`;
+                    item.remove();
+                };
+                board.appendChild(item);
+                setTimeout(() => item.remove(), 1200);
+
+                if (ringTimeLeft <= 0) {
+                    clearInterval(ringInterval);
+                    board.innerHTML = `<div class="absolute inset-0 flex flex-col items-center justify-center space-y-3 bg-ivory text-[#2C221E]"><h4 class="font-serif font-bold text-lg">Challenge Complete! 💍</h4><p class="text-xs">Final Score: ${ringScore} rings</p><button onclick="startRingGame()" class="bg-burgundy-600 text-gold px-4 py-2 rounded-full text-xs font-bold">Play Again</button></div>`;
+                    if (ringScore >= 8) addBadge("Ring Champion 💍");
+                }
+            }, 1000);
+        }
+
+        // Mystery Game
+        function startMysteryGame() {
+            showGameView('mystery');
+        }
+
+        function revealMystery(type) {
+            if (type === 'date') {
+                document.getElementById('mystery-date-box').innerHTML = `<p class="text-xs text-burgundy-600 font-bold">Coming Soon in 2026!</p>`;
+            } else if (type === 'color') {
+                document.getElementById('mystery-color-box').innerHTML = `<p class="text-xs text-burgundy-600 font-bold">Secret Colors Soon!</p>`;
+            } else if (type === 'venue') {
+                document.getElementById('mystery-venue-box').innerHTML = `<p class="text-xs text-burgundy-600 font-bold">Asaba, Delta State</p>`;
+            }
+            addBadge("Master Sleuth 🔍");
+        }
+
+        // Dance Game
+        function startDanceGame() {
+            showGameView('dance');
+            document.getElementById('dance-options-box').classList.remove('hidden');
+            document.getElementById('dance-result-box').classList.add('hidden');
+        }
+
+        function selectDance(style, emoji, desc) {
+            document.getElementById('dance-options-box').classList.add('hidden');
+            const resBox = document.getElementById('dance-result-box');
+            resBox.classList.remove('hidden');
+            document.getElementById('dance-emoji').innerText = emoji;
+            document.getElementById('dance-title').innerText = style + " Selected!";
+            document.getElementById('dance-desc').innerText = desc;
+            addBadge("Dance Floor Legend 💃");
+        }
+
+        function resetDance() {
+            document.getElementById('dance-options-box').classList.remove('hidden');
+            document.getElementById('dance-result-box').classList.add('hidden');
+        }
+
+        // RSVP Handler
+        function handleRSVP(e) {
+            e.preventDefault();
+            const name = document.getElementById('rsvp-name').value;
+            document.getElementById('rsvp-form').classList.add('hidden');
+            document.getElementById('rsvp-success').classList.remove('hidden');
+            document.getElementById('rsvp-success-text').innerText = `Thank you, ${name}. Your response has been recorded for CHIBECK 2026. We look forward to celebrating with you in Asaba!`;
+            confetti({ particleCount: 120, spread: 80, origin: { y: 0.7 } });
+        }
+
+        function resetRSVP() {
+            document.getElementById('rsvp-form').reset();
+            document.getElementById('rsvp-form').classList.remove('hidden');
+            document.getElementById('rsvp-success').classList.add('hidden');
+        }
+
+        // Sharing Functions
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const btn = document.getElementById('copy-btn');
+            btn.innerText = "Link Copied! ✓";
+            setTimeout(() => btn.innerText = "Copy Invitation Link", 2000);
+        }
+
+        function shareWhatsApp() {
+            const text = "Love is in the air! 💕 Chinedu Benjamin and Ifeoma Becky are writing their forever story. Come explore the CHIBECK 2026 wedding invitation and join the celebration! 💍❤️ " + window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
